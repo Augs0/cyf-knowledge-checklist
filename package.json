@@ -4,12 +4,13 @@
   "description": "a checklist for students to check their understanding of modules on the course",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx -p parcel-bundler parcel build index.html"
   },
   "author": "August Aldred",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "parcel-bundler": "^1.12.4",
     "postcss-modules": "^3.2.2"
   },
   "devDependencies": {
