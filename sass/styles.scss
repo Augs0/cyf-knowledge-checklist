@@ -18,6 +18,7 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   margin: 5px 5px 5px 10px;
+  box-shadow: 2px 2px 2px 2px #a09c9c;
 }
 
 //  Functions
@@ -90,7 +91,6 @@ main {
   width: 80%;
   .checklist-item {
     display: flex;
-    justify-content: space-evenly;
     min-width: 100%;
     padding: 20px;
     p {
@@ -127,7 +127,7 @@ main {
 }
 
 //  Media queries
-@media (min-width: 500px) {
+@media (min-width: 678px) {
   .checklist-item {
     justify-content: flex-end;
   }
