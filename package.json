@@ -4,17 +4,18 @@
   "description": "a checklist for students to check their understanding of modules on the course",
   "main": "index.html",
   "scripts": {
+    "dev": "parcel index.html",
     "build": "parcel build index.html"
   },
   "author": "August Aldred",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.8.6",
-    "parcel-bundler": "^1.12.4",
     "postcss-modules": "^3.2.2"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
   }
 }
