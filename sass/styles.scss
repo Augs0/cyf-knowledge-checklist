@@ -99,6 +99,15 @@ main {
   }
 }
 
+.how-to {
+  ul {
+    li {
+      padding: 20px;
+      font-size: 1.2em;
+    }
+  }
+}
+
 .options {
   display: flex;
   flex-direction: column;
