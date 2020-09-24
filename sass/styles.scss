@@ -98,6 +98,7 @@ main {
     display: flex;
     min-width: 100%;
     padding: 20px;
+    line-height: 1.5;
     p {
       padding: 10px;
     }
@@ -109,6 +110,7 @@ main {
     li {
       padding: 20px;
       font-size: 1.2em;
+      line-height: 1.5;
     }
   }
 }
