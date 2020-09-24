@@ -87,6 +87,11 @@ main {
 
 //  Class and ID styling
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .section {
   width: 80%;
   .checklist-item {
