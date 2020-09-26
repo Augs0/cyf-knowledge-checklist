@@ -85,12 +85,14 @@ main {
   padding: 30px;
 }
 
-//  Class and ID styling
-
-.container {
+header, main{
   max-width: 1200px;
   margin: 0 auto;
 }
+
+//  Class and ID styling
+
+
 
 .section {
   .checklist-item {
