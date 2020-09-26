@@ -54,7 +54,7 @@ body {
 
 body {
   background-color: var(--secondary-color);
-  font-size: 18px;
+  font-size: 16px;
   font-family: Raleway, sans-serif;
 }
 
@@ -82,17 +82,25 @@ main {
   flex-direction: column;
   min-width: 300px;
   margin: auto 0;
-  padding: 40px;
+  padding: 30px;
+}
+
+header, main{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 //  Class and ID styling
 
+
+
 .section {
-  width: 80%;
   .checklist-item {
     display: flex;
+    flex-direction: column;
     min-width: 100%;
-    padding: 20px;
+    padding: 10px;
+    line-height: 1.5;
     p {
       padding: 10px;
     }
@@ -101,9 +109,11 @@ main {
 
 .how-to {
   ul {
+    padding: 0;
     li {
       padding: 20px;
       font-size: 1.2em;
+      line-height: 1.5;
     }
   }
 }
@@ -111,6 +121,7 @@ main {
 .options {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .green-light,
@@ -118,6 +129,7 @@ main {
 .red-light {
   @include button;
   width: 100%;
+  max-width: 240px;
 }
 
 .green {
@@ -137,15 +149,50 @@ main {
 
 //  Media queries
 @media (min-width: 678px) {
-  .checklist-item {
-    justify-content: flex-end;
+  body {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 40px;
+  }
+
+  .how-to {
+    ul {
+      padding: 40px;
+    }
+  }
+
+  .section {
+    .checklist-item {
+      padding-left: 50px;
+      }
   }
   .options {
     flex-direction: row;
+    align-items: normal;
   }
   .green-light,
   .yellow-light,
   .red-light {
     width: 33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    .checklist-item {
+      flex-direction: row;
+    }
+  }
+
+  .checklist-item {
+    p {
+      width: 50%;
+    }
+
+    .options {
+      width: 40%;
+    }
   }
 }
