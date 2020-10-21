@@ -1,5 +1,7 @@
 node_modules/
-dist/
+/dist
 .cache/
 .DS_Store
 package-lock.json
+# Local Netlify folder
+.netlify

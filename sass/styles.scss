@@ -18,6 +18,7 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   margin: 5px 5px 5px 10px;
+  box-shadow: 2px 2px 2px 2px #a09c9c;
 }
 
 //  Functions
@@ -53,7 +54,7 @@ body {
 
 body {
   background-color: var(--secondary-color);
-  font-size: 18px;
+  font-size: 16px;
   font-family: Raleway, sans-serif;
 }
 
@@ -81,20 +82,37 @@ main {
   flex-direction: column;
   min-width: 300px;
   margin: auto 0;
-  padding: 40px;
+  padding: 30px;
+}
+
+header,
+main {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 //  Class and ID styling
 
 .section {
-  width: 80%;
   .checklist-item {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     min-width: 100%;
-    padding: 20px;
+    padding: 10px;
+    line-height: 1.5;
     p {
       padding: 10px;
+    }
+  }
+}
+
+.how-to {
+  ul {
+    padding: 0;
+    li {
+      padding: 20px;
+      font-size: 1.2em;
+      line-height: 1.5;
     }
   }
 }
@@ -102,6 +120,20 @@ main {
 .options {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+  .downloadPDF {
+    @include button;
+    background-color: var(--primary-colour);
+    color: var(--secondary-color);
+    padding: 16px 13px;
+    margin: 30px 0 0 0;
+    border: none;
+  }
 }
 
 .green-light,
@@ -109,34 +141,73 @@ main {
 .red-light {
   @include button;
   width: 100%;
+  max-width: 240px;
 }
 
 .green {
   color: text-contrast($green);
   background-color: var(--green-light);
+  -webkit-print-color-adjust: exact;
 }
 
 .yellow {
   color: text-contrast($yellow);
   background-color: var(--yellow-light);
+  -webkit-print-color-adjust: exact;
 }
 
 .red {
   color: text-contrast($red);
   background-color: var(--red-light);
+  -webkit-print-color-adjust: exact;
 }
 
 //  Media queries
-@media (min-width: 500px) {
-  .checklist-item {
-    justify-content: flex-end;
+@media (min-width: 678px) {
+  body {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 40px;
+  }
+
+  .how-to {
+    ul {
+      padding: 40px;
+    }
+  }
+
+  .section {
+    .checklist-item {
+      padding-left: 50px;
+    }
   }
   .options {
     flex-direction: row;
+    align-items: normal;
   }
   .green-light,
   .yellow-light,
   .red-light {
     width: 33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    .checklist-item {
+      flex-direction: row;
+    }
+  }
+
+  .checklist-item {
+    p {
+      width: 50%;
+    }
+
+    .options {
+      width: 40%;
+    }
   }
 }
