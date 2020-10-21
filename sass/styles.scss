@@ -85,14 +85,13 @@ main {
   padding: 30px;
 }
 
-header, main{
+header,
+main {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 //  Class and ID styling
-
-
 
 .section {
   .checklist-item {
@@ -124,6 +123,19 @@ header, main{
   align-items: center;
 }
 
+.download {
+  display: flex;
+  justify-content: center;
+  .downloadPDF {
+    @include button;
+    background-color: var(--primary-colour);
+    color: var(--secondary-color);
+    padding: 16px 13px;
+    margin: 30px 0 0 0;
+    border: none;
+  }
+}
+
 .green-light,
 .yellow-light,
 .red-light {
@@ -135,16 +147,19 @@ header, main{
 .green {
   color: text-contrast($green);
   background-color: var(--green-light);
+  -webkit-print-color-adjust: exact;
 }
 
 .yellow {
   color: text-contrast($yellow);
   background-color: var(--yellow-light);
+  -webkit-print-color-adjust: exact;
 }
 
 .red {
   color: text-contrast($red);
   background-color: var(--red-light);
+  -webkit-print-color-adjust: exact;
 }
 
 //  Media queries
@@ -166,7 +181,7 @@ header, main{
   .section {
     .checklist-item {
       padding-left: 50px;
-      }
+    }
   }
   .options {
     flex-direction: row;
